@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n $(echo "$WATER" | tr -cd 'a-z' | tr 'a-z' '0-9' | awk '{s += 26^length} END {print s}' ; echo "$STIR" | tr -cd 'a-z' | tr 'a-z' '0-9' | awk '{s += 26^length} END {print s}') | tr '0-9a-p' 'a-z'
+echo -n $(echo "$WATER" | tr -cd 'a-z' | tr 'a-z' '0-9' | awk '{s += 26^length} END {print s}' && echo "$STIR" | tr -cd 'a-z' | tr 'a-z' '0-9' | awk '{s += 26^length} END {print s}') | tr '0-9a-p' 'a-z'
