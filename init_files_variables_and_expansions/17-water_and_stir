@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "$((26#$(echo "$WATER" | tr -d -c 'a-z' | tr a-z '0-9' | sed 's/./&+/g' | sed 's/.$//') + 26#$(echo "$STIR" | tr -d -c 'a-z' | tr a-z '0-9' | sed 's/./&+/g' | sed 's/.$//') ))" | tr '0-9a-p' 'a-z'
+
